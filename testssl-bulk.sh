@@ -18,7 +18,7 @@ fi
 # Function to run testssl.sh on a URL and save output to a file
 run_testssl() {
   url=$1
-  output_file="testssl_$(echo "$url" | sed 's/[^[:alnum:]._-]/_/g')"
+  output_file="testssl_$(echo "$url" | sed 's/[^[:alnum:]._-]/_/g').txt"
   echo "Testing $url..."
   testssl "$url" > "$output_file"
   echo "Results saved to $output_file"
